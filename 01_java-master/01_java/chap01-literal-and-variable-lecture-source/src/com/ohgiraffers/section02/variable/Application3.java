@@ -86,7 +86,7 @@ public class Application3 {
         boolean isAlive = true;
         boolean isDead = false;
 
-
+//        System.out.println("실행");
 
 
     }

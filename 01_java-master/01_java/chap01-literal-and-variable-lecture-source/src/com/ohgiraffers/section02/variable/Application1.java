@@ -66,7 +66,7 @@ public class Application1 {
         count = count + 1;
         System.out.println("count에 1을 더하면 현재 count의 값은? " + count);
 
-
+//        System.out.println("실행");
 
     }
 }

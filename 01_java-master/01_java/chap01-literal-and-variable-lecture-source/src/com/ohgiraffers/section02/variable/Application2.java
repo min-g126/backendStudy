@@ -125,6 +125,6 @@ public class Application2 {
 
         System.out.println("point = point + 100 ? " + point);
 
-
+//        System.out.println("실행");
     }
 }
