@@ -124,6 +124,6 @@ public class Application2 {
 //        System.out.println(true * "a");
 //        System.out.println(true / "a");
 //        System.out.println(true % "a");
-        System.out.println("실행");
+//        System.out.println("실행");
     }
 }
