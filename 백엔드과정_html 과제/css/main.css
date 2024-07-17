@@ -1,0 +1,288 @@
+/* header */
+/* 배경 설정 */
+header {
+    background-image: url('../img/main.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 720px;
+}
+
+/* nav 설정 */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent; 
+    transition: background-color 0.3s;
+}
+
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.mainNav li {
+    margin: 0 10px;
+}
+
+.mainNav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mainNav li button {
+    border: 1px solid white;
+    background: none;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+/* 메인 배경 설정 */
+.maintext {
+    color: white;
+    padding: 80px 100px;
+}
+
+.maintext h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.maintext h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* main */
+main {
+    text-align: center;
+}
+
+article {
+    margin-bottom: 80px;
+}
+
+/* about */
+.mg{    margin-bottom: 45px;}
+.text h2{margin: 90px 0px 50px 0px}
+.personText{margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;}
+.aboutText {
+    padding-top: 85px;
+}
+
+article p {
+    margin: 15px 0px;
+    color: gray
+}
+
+#aboutImg {
+    width: 80%;
+}
+.flexRow{    display: flex;
+    align-items: center;
+    flex-direction: row;}
+
+.flexRow p{    margin: 10px;}
+#subBtn {
+    border: 1px solid;
+    background: none;
+    padding: 8px 25px;
+    margin: 15px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* bDay */
+.dDayBody {
+    height: 700px;
+    background: whitesmoke;
+}
+
+#dDayText {
+    padding-top: 10px;
+    margin: 0px;
+}
+
+#dDayText h3{
+    color: gray;
+}
+
+/* 달력 */
+.tableBar{    width: 50%;
+    border: 1.2px solid #d1d1d1;}
+table {
+    margin: 10px auto;
+    margin-bottom: 10px;
+    border: 0px solid transparent;
+    border-collapse: collapse;
+    width: 50%;
+    height: 400px;
+    table-layout: fixed;
+}
+
+table td,
+th {
+    font-size: 18px;
+}
+
+table th {
+    height: 40px;
+}
+
+table td {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+.otherMonth {
+    color: darkgrey;
+}
+
+.sat {
+    color: royalblue;
+}
+
+.sun {
+    color: red;
+}
+
+
+/* 결혼 남은 날짜 */
+table>caption {
+    font-size: 30px;
+    font-weight: 620;
+}
+#countdown{
+    margin-top: 30px;
+    margin-bottom: 10px;}
+#highlight {
+    color: #ff4500;
+    font-weight: bold;
+}
+.weddingDay{    display: flex;
+    flex-direction: column;
+    max-height: 10px;
+    color: #fc66b3;}
+.heartIcon {
+    color: #fc66b3;
+}
+
+/* 참석 의사 */
+.attendText {
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 20px;
+    width: 50%;
+    margin: 50px auto;
+    margin-top: 90px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.attendText h2 {
+    margin-top: 30px;
+}
+
+.attendText p {
+    margin: 10px;
+    padding: 0px;
+    color: gray;
+}
+
+#attendBtn{border: none;
+    background: #eaeaea;
+    padding: 10px 20px;
+    margin: 25px;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: medium;
+    cursor: pointer;}
+.attendText button {
+    margin-top: 30px;
+}
+
+/* 마음 전하실 곳 */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#contact h2{    margin-bottom: 35px;}
+.mg10{margin:10px;
+    color: gray;}
+
+#contactText {
+    border: 1px solid #cacaca;
+    border-radius: 12px;
+    width: 300px;
+    margin: 30px 30px 0px 30px;
+    padding: 10px;
+    background: #eaeaea;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: medium;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#brideContactText{
+    border: 1px solid #cacaca;
+    border-radius: 12px;
+    width: 300px;
+    margin: 30px 30px 0px 30px;
+    padding: 10px;
+    background: #eaeaea;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: medium;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#contactDiv{margin-top: 10px;
+    margin-bottom: 70px;}
+
+.pd{    padding: 10px;}
+.num{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.account-number{border: 1px solid lightgray;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;}
+#toggleGroomIcon{
+    cursor: pointer;
+}
+#toggleBrideIcon{
+    cursor: pointer;
+}
+
+/* JavaScript css */
+/*계좌번호 숨기기*/
+.hidden {
+    display: none;
+}

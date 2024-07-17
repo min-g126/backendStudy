@@ -1,0 +1,39 @@
+/* 전 페이지에 공통적으로 사용되는 css */
+/* 기본 세팅 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button {
+    border-radius: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+/* 폰트 */
+.mainFont {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.navFont{  font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    font-style: normal;}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: whitesmoke;
+    padding: 15px;
+}
+footer p{
+    margin: 5px;
+}

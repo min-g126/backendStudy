@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Gowun+Dodum&family=Noto+Serif+KR&family=Sedan:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/59d34efa84.js" crossorigin="anonymous"></script>
+
+<body>
+    <!-- 웨딩 청첩장 페이지 -->
+
+    <!-- 기획의도 : 밝고 축하 분위기의 페이지를 구성하고 싶어 웨딩으로 주제를 잡았으며, 
+                   요즘 모바일 청첩장이 많이 활성화 되어있기 때문에 그것을 이용하여 페이지를 만들고자 했다.
+                   모바일 청첩장을 참고하여 페이지를 구성하였다.
+    -->
+    <!-- 페이지 구성 : 메인 페이지 / 신랑신부 소개 페이지 / 예식장 위치 정보 페이지 
+                      각 페이지에서 주석으로 설명 
+    -->
+    <!-- 메인 페이지 :  전반적인 결혼식에 대한 정보를 간략하게 소개 및 각 세부 페이지로 이동할 수 있도록 구성 -->
+    <header>
+        <!-- 상단 고정바 -->
+        <nav>
+            <ul class="mainNav">
+                <li></li>
+                <li class="navFont"><a href="../html/main.html">MARRIAGE</a></li>
+                <li><button><a href="../html/main.html" class="navFont">main</a></button></li>
+            </ul>
+        </nav>
+        <!-- 메인 배경 -->
+        <section class="maintext">
+            <h1 class="mainFont">WEDDING,</h1>
+            <h2 class="mainFont">2024</h2>
+        </section>
+    </header>
+
+    <main>
+        <!-- 간단한 결혼 소개 -->
+        <section id="about">
+            <article class="aboutText">
+                <h2 class="mg">배민지 | 길준영</h2>
+                <p>2024년 5월 11일 토요일 오후 3시</p>
+                <p>더 세인트 6층</p>
+            </article>
+
+            <article class="text">
+                <h2>소중한 분들을 초대합니다</h2>
+                <p>그런즉 이제 둘이 아니요 한 몸이니</p>
+                <p>그러므로 하나님이 짝지어 주신 것을</p>
+                <p>사람이 나누지 못할지니라 하시니</p>
+                <p>마태볶음 19:6</p>
+            </article>
+        </section>
+
+        <section id="people">
+            <img src="../img/about.jpg" alt="웨딩사진" id="aboutImg">
+            <article class="personText">
+                <div class="flexRow">
+                    <h3>배성민 · 김지연</h3>
+                    <p>의 딸</p>
+                    <h3>민지</h3>
+                </div>
+                <div class="flexRow">
+                    <h3>길홍진 · 이경애</h3>
+                    <p>의 아들</p>
+                    <h3>준영</h3>
+                </div>
+                <!-- 신부 신랑 소개 페이지로 이동 -->
+                <button id="subBtn"><a href="../html/people.html">자세히</a></button>
+            </article>
+        </section>
+
+        <!-- 결혼 날짜 달력으로 표시 -->
+        <section id="dDay">
+            <div class="dDayBody">
+                <article id="dDayText">
+                    <h2>2024.05.11</h2>
+                    <h3>토요일 오후 3시</h3>
+                </article>
+                <hr class="tableBar" />
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="sun">SUN</th>
+                            <th class="">MON</th>
+                            <th class="">TUE</th>
+                            <th class="">WED</th>
+                            <th class="">THU</th>
+                            <th class="">FRI</th>
+                            <th class="sat">SAT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td class="sat">4</td>
+                        </tr>
+                        <tr>
+                            <td class="sun">5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td class="weddingDay">11<span class="heartIcon">♥️</span></td>
+                        </tr>
+                        <tr>
+                            <td class="sun">12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td class="sat">18</td>
+                        </tr>
+                        <tr>
+                            <td class="sun">19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td class="sat">25</td>
+                        </tr>
+                        <tr>
+                            <td class="sun">26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr class="tableBar" />
+                <div id="countdown"></div>
+
+                <!-- 남은 결혼식 날짜 표시 -->
+                <script>
+                    var targetDate = '2024-05-11';
+                    var targetDateObj = new Date(targetDate);
+                    var currentDateObj = new Date();
+
+                    var timeDiff = targetDateObj - currentDateObj;
+
+                    var daysRemaining = Math.round(timeDiff / (1000 * 60 * 60 * 24));
+
+                    var countdownElement = document.getElementById('countdown');
+
+                    countdownElement.innerHTML = "민지 " + "<span id='highlight'>" + "♥️" + "</span>" + " 준영이의 결혼식이 " + "<span id='highlight'>" + daysRemaining + "일" + "</span>" + " 남았습니다.";
+                </script>
+
+                <!-- 결혼식 위치 정보 페이지로 이동 -->
+                <button id="subBtn"><a href="../html/information.html">자세히</a></button>
+            </div>
+            </div>
+        </section>
+
+        <!-- 참석 의사 페이지 -->
+        <section id="attend">
+            <div class="attendText">
+                <h2>참석 의사 전달</h2>
+                <p>축하의 마음으로 참석해주시는</p>
+                <p>모든 분들을 귀하게 모실 수 있도록</p>
+                <p>참석 의사를 전달 부탁드립니다.</p>
+                <button id="attendBtn">참석 의사 전달하기</button>
+            </div>
+        </section>
+
+        <!-- 양가 계좌 페이지 -->
+        <section id="contact">
+            <h2>마음 전하실 곳</h2>
+            <p class="mg10">참석이 어려우신 분들을 위해</p>
+            <p class="mg10">계좌번호를 기재하였습니다.</p>
+            <p class="mg10">너그러운 마음으로 양해 부탁드립니다.</p>
+
+            <!-- 계좌 번호 나타내는 영역 -->
+            <!-- 아이콘 누르면 해당 계좌번호 나왔다가 들어가기 -->
+            <article id="contactDiv">
+                <div class="num">
+                    <h4 id="contactText">
+                        <div class="pd"></div>신랑측 계좌번호
+                        <i id="toggleGroomIcon" class="fa-solid fa-chevron-down"
+                            onclick="toggleGroomAccountNumber()"></i>
+                    </h4>
+                    <div id="groomAccountNumber" class="account-number hidden">
+                        계좌번호: XXXX-XXXX-XXXX
+                    </div>
+                </div>
+                <div class="num">
+                    <h4 id="brideContactText">
+                        <div class="pd"></div>신부측 계좌번호
+                        <i id="toggleBrideIcon" class="fa-solid fa-chevron-down"
+                            onclick="toggleBrideAccountNumber()"></i>
+                    </h4>
+                    <div id="brideAccountNumber" class="account-number hidden">
+                        계좌번호: XXXX-XXXX-XXXX
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>카카오톡 공유하기</p>
+        <p>Tel. 000-0000-0000</p>
+        <p>&copy; 2024 Our Wedding</p>
+    </footer>
+
+    <script>
+        /* nav 스크롤시 색상 바꾸기 */
+        window.addEventListener('scroll', function () {
+            var nav = document.querySelector('nav');
+            var main = document.querySelector('#about');
+            var mainButton = document.querySelector('nav button');
+
+            // main 위치부터 nav 바 하얀색으로 바꾸기
+            if (window.scrollY > main.offsetTop) {
+                nav.style.background = 'white';
+                nav.style.borderBottom = '1px solid lightgray';
+                mainButton.style.border = '1px solid black';
+                nav.querySelectorAll('a').forEach(function (item) {
+                    item.style.color = 'black';
+                });
+            } else {
+                nav.style.background = 'transparent';
+                nav.style.borderBottom = 'none';
+                mainButton.style.border = '1px solid white';
+                nav.querySelectorAll('a').forEach(function (item) {
+                    item.style.color = 'white';
+                });
+            }
+        });
+
+        /*신랑 계좌번호 나타내기*/
+        function toggleGroomAccountNumber() {
+            const groomAccountNumber = document.getElementById('groomAccountNumber');
+            const groomIcon = document.getElementById('toggleGroomIcon');
+            groomAccountNumber.classList.toggle('hidden');
+            groomIcon.classList.toggle('fa-chevron-down');
+            groomIcon.classList.toggle('fa-chevron-up');
+        }
+
+        /*신부 계좌번호 나타내기*/
+        function toggleBrideAccountNumber() {
+            const brideAccountNumber = document.getElementById('brideAccountNumber');
+            const brideIcon = document.getElementById('toggleBrideIcon');
+            brideAccountNumber.classList.toggle('hidden');
+            brideIcon.classList.toggle('fa-chevron-down');
+            brideIcon.classList.toggle('fa-chevron-up');
+        }
+
+    </script>
+</body>
+
+</html>

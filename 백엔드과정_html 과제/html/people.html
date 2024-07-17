@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>people</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/people.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Abril+Fatface&family=Gowun+Dodum&family=Noto+Serif+KR&family=Sedan:ital@0;1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 신랑 신부 정보와 둘의 사진을 볼 수 있는 페이지 -->
+    <header>
+        <!-- 상단 고정 바 (main 화면으로 이동 가능) -->
+        <nav>
+            <ul class="mainNav">
+                <li></li>
+                <li class="navFont"><a href="../html/main.html">MARRIAGE</a></li>
+                <li><button><a href="../html/main.html" class="navFont">main</a></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 신랑 신부 정보 -->
+    <main>
+        <section id="peoples">
+            <img src="../img/girl.jpg" alt="신부사진" id="peopleImg" class="thumbnail">
+            <img src="../img/boy.jpg" alt="신랑사진" id="peopleImg" class="thumbnail">
+        </section>
+        <section id="peopleText">
+            <article id="parent">
+                <div class="parents">
+                    <h3>배성민</h3>
+                    <h3>김지연</h3>
+                </div>
+                <p>의 딸</p>
+                <h3 class="person">민지</h3>
+            </article>
+            <article id="parent">
+                <div class="parents">
+                    <h3>길홍진</h3>
+                    <h3>이경애</h3>
+                </div>
+                <p>의 아들</p>
+                <h3 class="person">준영</h3>
+            </article>
+        </section>
+
+        <!-- 사귀기 시작한 날부터 결혼하는 날 -->
+        <section id="dDate">
+            <p>2018.05.15 ~</p>
+            <p>WEDDING 2024.05.11</p>
+        </section>
+
+        <!-- 신부 신랑 사진 갤러리 -->
+        <!-- 사진 하나를 누르면 그 사진의 원본 사진 나타나기 -->
+        <section id="gallery">
+            <h2>갤러리</h2>
+            <article id="peopleImgs">
+                <img src="../img/peopleImg1.jpg" class="thumbnail" data-src="../img/ModalImg1.jpg">
+                <img src="../img/peopleImg2.jpg" class="thumbnail" data-src="../img/ModalImg2.jpg">
+                <img src="../img/peopleImg3.jpg" class="thumbnail" data-src="../img/ModalImg3.jpg">
+                <br />
+                <img src="../img/peopleImg4.jpg" class="thumbnail" data-src="../img/ModalImg4.jpg">
+                <img src="../img/peopleImg5.jpg" class="thumbnail" data-src="../img/ModalImg5.jpg">
+                <img src="../img/peopleImg6.jpg" class="thumbnail" data-src="../img/ModalImg6.jpg">
+                <br />
+                <img src="../img/peopleImg7.jpg" class="thumbnail" data-src="../img/ModalImg7.jpg">
+                <img src="../img/peopleImg8.jpg" class="thumbnail" data-src="../img/ModalImg8.jpg">
+                <img src="../img/peopleImg9.jpg" class="thumbnail" data-src="../img/ModalImg9.jpg">
+                <div id="layer" class="layer"></div>
+
+                <div id="container" class="container">
+                    <img src="" alt="" id="modal-img">
+                </div>
+            </article>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <p>카카오톡 공유하기</p>
+            <p>Tel. 000-0000-0000</p>
+            <p>&copy; 2024 Our Wedding</p>
+        </footer>
+    </main>
+
+    <!-- script 영역 -->
+    <script>
+        //사진 누르면 원본사진으로 크게 나오기
+        var thumbnails = document.querySelectorAll(".thumbnail");
+        var modalImg = document.getElementById("modal-img");
+        var container = document.getElementById("container");
+        var layer = document.getElementById("layer");
+
+        thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", (event) => {
+        var clickedImageSrc = event.target.dataset.src;
+        modalImg.src = clickedImageSrc;
+
+        // 이미지 확대 시 클래스 추가
+        modalImg.classList.add('enlarged-img');
+
+        container.style.display = "block";
+        layer.style.display = "block";
+    });
+});
+
+layer.addEventListener("click", () => {
+    layer.style.display = "none";
+    container.style.display = "none";
+
+    // 이미지 확대 시 클래스 제거
+    modalImg.classList.remove('enlarged-img');
+});
+
+    </script>
+</body>
+
+</html>

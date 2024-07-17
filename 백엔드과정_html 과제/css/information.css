@@ -1,0 +1,86 @@
+/* nav 설정 */
+.blank {
+    padding: 0px 10px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: 1px solid lightgray;
+    background: white;
+}
+
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.mainNav li {
+    margin: 0 10px;
+}
+
+.mainNav li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mainNav li button {
+    border: 1px solid rgb(0, 0, 0);
+    background: none;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+
+/* 지도 */
+#mapText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.mapSubText {
+    padding: 0px;
+    margin: 10px 0px;
+    font-size: 17px;
+}
+
+.mapSubText2 {
+    padding: 0px;
+    margin: 10px 0px;
+    font-size: 17px;
+    color: gray;
+}
+
+.map iframe {
+    width: 480px;
+    height: 350px;
+}
+
+#mapItem {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+#inforText {
+    margin-left: 70px;
+    margin-right: 20px;
+}
+
+.mg-bot {
+    margin-bottom: 20px;
+}
+
+div p {
+    color: gray;
+    margin-left: 20px;
+}
