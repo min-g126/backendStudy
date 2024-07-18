@@ -1,0 +1,120 @@
+/* 기본 설정 */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "KCC-Hanbit";
+  }
+
+.todoList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 요소를 수평 및 수직으로 가운데 정렬 */
+    flex-direction: column;
+    height: 100vh;
+    /* 화면 높이의 100%를 차지 */
+}
+
+/* header */
+header,
+footer {
+    background-color: #d4b9ff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: calc(100vw / 3);
+    border-radius: 10px
+}
+
+/* 수정된 부분: body 배경색과 크기 조정 */
+body {
+    background-color: hsl(216, 100%, 95%);
+    /* 연보라색 배경 */
+    height: 100vh;
+    /* 화면 높이의 100%를 차지 */
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    flex: 1;
+    /* body의 3분의 2를 차지 */
+}
+
+/* list */
+.list {
+    margin: 20px;
+    background: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    height: 300px;
+    border-radius: 20px;
+    width: calc(100vw / 3);
+}
+
+.listDiv {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 10px 10px 10px;
+}
+
+.inputContent {
+    padding: 5px 5px 5px 10px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 10px;
+    border: 1px solid #9E9E9E;
+    height: 20px;
+    width: 60%;
+}
+
+button {
+    padding: 7px;
+    background: #4591ff61;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.listContent {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+}
+
+li button {
+    margin-left: 10px;
+    background-color: #ffc0c0;
+    color: white;
+    border: none;
+    padding: 1px 4px;
+    cursor: pointer;
+    border-radius: 50%;
+}

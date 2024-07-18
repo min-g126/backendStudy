@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="../to_do_list.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- 
+        TODO_List 만들기
+     -->
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // Header 컴포넌트
+        function Header() {
+            return (
+                <header>
+                    <h1>Todo List</h1>
+                </header>
+            );
+        }
+
+        // Content 컴포넌트
+        function Content() {
+            const [details, setDetails] = useState([]);
+            const [inputText, setInputText] = useState('');
+            const [nextId, setNextId] = useState(1);
+
+            const onChangeHandler = e => setInputText(e.target.value);
+            const onClickHandler = () => {
+                // 입력된 텍스트가 비어 있는지 확인
+                if (!inputText.trim()) {
+                    return; // 비어 있다면 아무 작업도 수행 X
+                }
+
+                // 리스트 개수가 8개 이상이면 추가 X
+                if (details.length >= 8) {
+                    alert('리스트를 더 이상 추가할 수 없습니다 (최대 8개)');
+                    return;
+                }
+
+                const newDetails = details.concat({
+                    id: nextId,
+                    text: inputText
+                });
+                setDetails(newDetails);
+                setNextId(nextId + 1);
+                setInputText('');
+            };
+
+            const onRemove = id => {
+                const removeList = details.filter(list => list.id !== id);
+                setDetails(removeList);
+            };
+
+            const onToggle = id => {
+                setDetails(details.map(list =>
+                    list.id === id ? { ...list, completed: !list.completed } : list
+                ));
+            };
+
+            return (
+                <div class="list">
+                    <div class="listDiv">
+                        <input class="inputContent" type="text" value={inputText} onChange={onChangeHandler} />
+                        <button onClick={onClickHandler}>ADD</button>
+                    </div>
+                    <div class="listContent">
+                        <ul>
+                            {details.map(list => (
+                                <li key={list.id}>
+                                    <span style={{ textDecoration: list.completed ? 'line-through' : 'none' }}>
+                                        <input type="checkbox" onChange={() => onToggle(list.id)} checked={list.completed} />
+                                        {list.text}
+                                    </span>
+                                    <button onClick={() => onRemove(list.id)}>X</button>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            );
+        }
+
+        // Footer 컴포넌트
+        function Footer() {
+            return (
+                <footer>
+                    <p>TODO List 공유하기</p>
+                </footer>
+            );
+        }
+
+        // App 컴포넌트
+        function App() {
+            return (
+                <div class="todoList">
+                    <Header />
+                    <Content />
+                    <Footer />
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.querySelector('#root')).render(<App />)
+    </script>
+</body>
+
+</html>
