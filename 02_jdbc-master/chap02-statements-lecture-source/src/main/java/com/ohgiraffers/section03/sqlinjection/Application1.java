@@ -31,6 +31,7 @@ public class Application1 {
                 System.out.println(rset.getString("EMP_NAME") + "님 환영환영니다.");
             } else {
                 System.out.println("회원 정보가 없습니다.");
+	System.out.println("다시 입력하세요.");
             }
 
         } catch (SQLException e) {
