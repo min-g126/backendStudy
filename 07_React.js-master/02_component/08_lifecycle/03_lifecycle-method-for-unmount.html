@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+</head>
+<body>
+    <!-- 
+        언마운트(화면에서 DOM제거) 카테고리의 생명주기 메소드는 componentWillUnmount이며
+        언마운트 시 호출된다.
+     -->
+
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+
+        class Greeting extends React.Component {
+
+            render() {
+                return <h1>hello world!</h1>;
+            }
+
+            componentWillUnmount() {
+                console.log('componentWillUnmount');
+            }
+
+        }
+
+        root.render(<Greeting/>);
+
+        /* 5초 뒤 아무런 컴포넌트도 렌더링하지 않는 것으로 변경하여 언마운트 상황을 연출 */
+        window.setTimeout(
+            () => root.render(null),
+            5000
+        );
+
+    </script>
+</body>
+</html>

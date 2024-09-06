@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+</head>
+<body>
+    <div id="root"></div>
+    <!-- 
+        컴포넌트의 라이프 사이클 메소드는 총 9가지가 있다.
+        라이프 사이클 메소드는 클래스형 메소드에서만 사용 가능하며,
+        라이프 사이클의 카테고리는 마운트, 언마운트, 업데이트 3가지로 나뉜다.
+
+        - 마운트(Mount): DOM이 생성되고 웹브라우저상 나타나는 것이다.
+        - 업데이트(Update): 컴포넌트의 상태가 바뀌는 경우를 의미하며, 총 4가지의 업데이트 상황이 있다.
+                            (props변경, state 변경, 부모 컴포넌트 리렌더링, this.forceUpdate로 강제 렌더링 트리거)
+        - 언마운트(Unmount): 컴포넌트를 DOM에서 제거하는 것이다.
+
+        (생명주기 도표: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+     -->
+
+     <!-- 
+        [ 마운트 시 ]
+        constructor -> getDerivedStateFromProps -> render -> componentDidMount 순으로 호출된다. 
+      -->
+    
+    <script type="text/babel">
+
+        class Greeting extends React.Component {
+
+            constructor(props) {
+                super(props);
+
+                console.log('constructor');
+                console.log(props);
+
+                /* 
+                    state를 초기화 할 목적으로 주로 사용
+                    해당 위치에서 props를 이용해 state값을 초기화 하면
+                    마운트 시점에는 state변경이 가능하지만,
+                    update 시점에는 state값을 변경하지 못한다.
+                 */
+                this.state = {
+                    text: ''
+                }
+
+            }
+
+            /* 
+                props에 있는 값을 state에 넣을 때 사용하는 메소드이다. 
+                마운트와 업데이트 시 호출된다.
+            */
+            static getDerivedStateFromProps(nextProps, prevState) {
+
+                console.log('getDerivedStateFromProps');
+                console.log('nextProps', nextProps);
+                console.log('prevState', prevState);
+
+                /* state 변경을 원하지 않으면 null을 리턴한다. */
+                return null;
+            }
+
+            /* 
+                리액트 엘리먼트를 렌더트리 형태로 구성하는 시점에 호출되는 메소드이다. 
+                렌더링 될 컴포넌트의 형태를 리액트 컴포넌트로 반환한다.
+                render 메소드는 this.state와 this.props에 접근할 수 있다.
+                아무런 컴포넌트도 보여주고 싶지 않을 때 null 혹은 falsy값을 반환한다.
+            */
+
+            /* 
+                [ 주의사항 ]
+                이 메소드 내에서는 직접 setState를 호출하면 안된다.
+                이벤트 콜백 함수 내에서 간접적으로 setState를 호출해야 한다.
+                또한 브라우저의 DOM에 접근해서도 안된다.
+                DOM 정보를 가지고 오거나 state의 변화를 줄 때 componentDidMount에서 처리해야 한다.
+            */
+            render() {
+
+                console.log('render');
+
+                return <h1>hello world, {this.state.text}</h1>
+
+            }
+
+            componentDidMount() {
+                console.log('componentDidMount');
+            }
+            
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            <Greeting text="홍길동"/>);
+    </script>
+</body>
+</html>
