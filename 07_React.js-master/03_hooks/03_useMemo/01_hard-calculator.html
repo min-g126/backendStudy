@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>         
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        const longCalculator = (number) => {
+
+            console.log('시간이 오래 걸리는 계산...');
+
+            for(let i = 0; i < 999999999; i ++) {
+                
+            }
+
+            return number + 10000;
+        }
+
+        function App() {
+
+            const [number, setNumber] = useState(1);
+
+            const sum = longCalculator(number);
+
+            return (
+                <>
+                    <h3>시간이 오래 걸리는 계산기</h3>
+                    <input 
+                        type="text"
+                        value={number}
+                        onChange={ e => setNumber(parseInt(e.target.value)) }
+                    />
+                    <span> + 10000 = { sum }</span>
+                </>
+            );
+
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+    </script>
+</body>
+</html>

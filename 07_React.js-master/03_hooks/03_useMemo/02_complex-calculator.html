@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>         
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        const longCalculator = (number) => {
+
+            console.log('시간이 오래 걸리는 계산...');
+
+            for(let i = 0; i < 999999999; i ++) {
+                
+            }
+
+            return number + 10000;
+        }
+
+        const shortCalculator = (number) => {
+
+            console.log('시간이 오래 걸리지 않는 계산...');
+
+            return number + 1;
+        }
+
+        function App() {
+
+            const [longNumber, setLongNumber] = useState(1);
+            const [shortNumber, setShortNumber] = useState(1);
+
+            const longsum = longCalculator(longNumber);
+            const shortSum = shortCalculator(shortNumber);
+
+            return (
+                <>
+                    <h3>시간이 오래 걸리는 계산기</h3>
+                    <input 
+                        type="text"
+                        value={ longNumber }
+                        onChange={ e => setLongNumber(parseInt(e.target.value)) }
+                    />
+                    <span> + 10000 = { longsum }</span>
+
+                    <h3>시간이 적게 걸리는 계산기</h3>
+                    <input 
+                        type="number"
+                        value={ shortNumber }
+                        onChange={ e => setShortNumber(parseInt(e.target.value)) }
+                    />
+                    <span> + 1 = { shortNumber }</span>
+                </>
+            );
+
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+    </script>
+</body>
+</html>
