@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>File Upload</h1>
+
+    <h3>single file upload</h3>
+    <form action="single-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="singleFile"><br>
+        파일 설명 : <input type="text" name="singleFileDescription"><br>
+        <input type="submit" value="File Upload">
+    </form>
+
+    <h3>multi file upload</h3>
+    <form action="multi-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="multiFiles" multiple><br>
+        파일 설명 : <input type="text" name="multiFilesDescription"><br>
+        <input type="submit" value="File Upload">
+    </form>
+</body>
+</html>
