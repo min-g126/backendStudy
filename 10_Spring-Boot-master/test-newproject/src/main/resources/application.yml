@@ -1,0 +1,4 @@
+test:
+  greeting: hello world!
+  array: hi, hello, how are you?
+  value: good afternoon world!
