@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/menu
+    username: sahmyook
+    password: sahmyook
+
+mybatis:
+  mapper-locations: mappers/**/*.xml
